@@ -14,6 +14,7 @@
     "create-template-react-app": "git+https://gitam2.altamedia.vn/react_lib/create-template-react-app.git",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-google-recaptcha": "^2.1.9"
   }
 }

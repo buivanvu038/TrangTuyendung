@@ -57,7 +57,7 @@ const ForgotPass: React.FC = () => {
             onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
-            <Text>Mật khẩu</Text>
+            <Text>Email</Text>
 
             <Form.Item
               label=""
@@ -68,19 +68,10 @@ const ForgotPass: React.FC = () => {
             >
               <Input />
             </Form.Item>
-            <Text>Mật khẩu</Text>
-            <Form.Item
-              label=""
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-            >
-              <Input.Password />
-            </Form.Item>
+
             <Buttontextpass>
               <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <a href="#" onClick={showModal}>
+                <a href="/forgotpass" onClick={showModal}>
                   <CustomButtonpass>Xác nhận</CustomButtonpass>
                 </a>
                 <StyledLink>
