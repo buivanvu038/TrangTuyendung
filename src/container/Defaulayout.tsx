@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Forgotpass from "./pages/Forgotpass/Forgotpass";
 
 import Regenerate from "./pages/Regenerate/Regenerate";
+import Card from "../components/Cards/Card";
 
 const Defaultlayout = () => {
   return (

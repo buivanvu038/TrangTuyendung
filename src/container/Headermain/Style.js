@@ -20,7 +20,7 @@ export const StyledImage = styled.div`
 export const StyledImagee = styled.div`
   display: flex;
   background: #ffff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 `;
 
 export const Text = styled.a`

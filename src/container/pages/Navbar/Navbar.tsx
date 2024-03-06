@@ -1,37 +1,108 @@
-import React from "react";
-import { Input, Button, Dropdown, Menu } from "antd";
+import React, { useState } from "react";
+import { DownOutlined, SearchOutlined } from "@ant-design/icons";
+import { Menu, Dropdown, Space, Button } from "antd";
+import styled from "styled-components";
+import {
+  StyledNavbar,
+  InputContainer,
+  Input,
+  PlaceholderText,
+  Drop2,
+  StyledButton,
+} from "./Style";
 
 const Navbar = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const items1 = [
+    {
+      label: <a href="/#">1st menu item</a>,
+      key: "0",
+    },
+    {
+      label: <a href="/#">2nd menu item</a>,
+      key: "1",
+    },
+    {
+      type: "divider",
+    },
+    {
+      label: "3rd menu item",
+      key: "3",
+    },
+  ];
+
+  const items2 = [
+    {
+      label: "Dropdown 2 - Item 1",
+      key: "0",
+    },
+    {
+      label: "Dropdown 2 - Item 2",
+      key: "1",
+    },
+    {
+      type: "divider",
+    },
+    {
+      label: "Dropdown 2 - Item 3",
+      key: "3",
+    },
+  ];
+
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div>
-        <Input style={{ width: "100px", marginRight: "5px" }} />
-        <Dropdown overlay={menu1}>
-          <Button style={{ marginRight: "5px" }}>Dropdown 1</Button>
+    <StyledNavbar>
+      <SearchOutlined style={{ color: "#f26d21", marginRight: "8px" }} />
+
+      <InputContainer>
+        <Input type="text" value={inputValue} onChange={handleChange} />
+        {inputValue === "" && (
+          <PlaceholderText>Nhập vị trí muốn ứng tuyển</PlaceholderText>
+        )}
+      </InputContainer>
+      <Dropdown
+        overlay={
+          <Menu>
+            {items1.map((item) => (
+              <Menu.Item key={item.key}>{item.label}</Menu.Item>
+            ))}
+          </Menu>
+        }
+        trigger={["click"]}
+      >
+        <a onClick={(e) => e.preventDefault()}>
+          <Space>
+            Chọn lĩnh vực chuyên môn
+            <DownOutlined style={{ color: "#f26d21", marginRight: "8px" }} />
+          </Space>
+        </a>
+      </Dropdown>
+      <Drop2>
+        <Dropdown
+          overlay={
+            <Menu>
+              {items2.map((item) => (
+                <Menu.Item key={item.key}>{item.label}</Menu.Item>
+              ))}
+            </Menu>
+          }
+          trigger={["click"]}
+        >
+          <a onClick={(e: React.MouseEvent) => e.preventDefault()}>
+            <Space>
+              Chọn công ty
+              <DownOutlined style={{ color: "#f26d21", marginRight: "8px" }} />
+            </Space>
+          </a>
         </Dropdown>
-        <Dropdown overlay={menu2}>
-          <Button style={{ marginRight: "5px" }}>Dropdown 2</Button>
-        </Dropdown>
-        <Button type="primary">Search</Button>
-      </div>
-    </div>
+      </Drop2>
+      <StyledButton icon={<SearchOutlined />}>Tìm việc</StyledButton>
+    </StyledNavbar>
   );
 };
-
-const menu1 = (
-  <Menu>
-    <Menu.Item key="1">Option 1</Menu.Item>
-    <Menu.Item key="2">Option 2</Menu.Item>
-    <Menu.Item key="3">Option 3</Menu.Item>
-  </Menu>
-);
-
-const menu2 = (
-  <Menu>
-    <Menu.Item key="1">Option A</Menu.Item>
-    <Menu.Item key="2">Option B</Menu.Item>
-    <Menu.Item key="3">Option C</Menu.Item>
-  </Menu>
-);
 
 export default Navbar;
