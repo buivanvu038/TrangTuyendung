@@ -1,17 +1,4 @@
-import styled from "styled-components";
-
-export const StyledFooter = styled.div`
-  background-color: #fff;
-  color: black;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 120px;
-`;
-
-export const StyledText = styled.i`
-  margin-top: 20px;
-  color: black;
-`;
+import { StyledFooter, StyledText } from "./Style";
 
 const Footer = () => {
   return (

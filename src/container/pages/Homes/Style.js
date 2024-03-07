@@ -20,3 +20,19 @@ export const RowStyle = styled.div`
 export const Row2 = styled.div`
   margin-bottom: 30px;
 `;
+export const PaginationStyle = styled.div`
+  text-align: center;
+
+  .ant-pagination-item {
+    border-radius: 50%; // Đặt đường viền thành hình tròn
+    border-color: #f1f3f5; // Đặt màu cam cho ô phân trang
+    transition: background-color 0.3s; // Thêm hiệu ứng chuyển đổi màu
+    color: white; // Đặt màu cho số trong ô phân trang
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #f26d21; // Giữ nguyên màu nền khi hover, được chọn và khi tập trung
+    }
+  }
+`;

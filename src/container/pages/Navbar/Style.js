@@ -16,6 +16,7 @@ export const StyledNavbar = styled.div`
   margin-left: 500px;
   margin-right: 500px;
   border-radius: 7px;
+  margin-bottom: 20px;
 `;
 
 export const DropdownContainer = styled.div`

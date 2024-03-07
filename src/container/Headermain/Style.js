@@ -27,11 +27,13 @@ export const Text = styled.a`
   display: flex;
   margin-bottom: 20px;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    /* Thêm :focus */
     color: #f26d21;
+    text-decoration: none;
   }
 `;
 
@@ -40,10 +42,12 @@ export const Text2 = styled.a`
   margin-bottom: 20px;
   margin-left: 20px;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    /* Thêm :focus */
     color: #f26d21;
+    text-decoration: none;
   }
 `;

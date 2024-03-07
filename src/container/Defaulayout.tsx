@@ -6,7 +6,9 @@ import Login from "./pages/Login/Login";
 import Forgotpass from "./pages/Forgotpass/Forgotpass";
 
 import Regenerate from "./pages/Regenerate/Regenerate";
-import Card from "../components/Cards/Card";
+
+import Registeronline from "./pages/Registeronline/Registeronline";
+import Notfound from "./pages/notfound/Notfound";
 
 const Defaultlayout = () => {
   return (
@@ -18,6 +20,8 @@ const Defaultlayout = () => {
           <Route path="/Login" element={<Login />} />
           <Route path="/forgotpass" element={<Forgotpass />} />
           <Route path="/regenerate" element={<Regenerate />} />
+          <Route path="/registeronline" element={<Registeronline />} />
+          <Route path="/notfound" element={<Notfound />} />
         </Routes>
       </div>
     </Router>

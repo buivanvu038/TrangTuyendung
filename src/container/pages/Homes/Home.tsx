@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import Card from "../../../components/Cards/Card";
 import { Col, Row } from "antd";
-import { BodyStyle, Texttitle, RowStyle } from "./Style";
+import { BodyStyle, Texttitle, RowStyle, PaginationStyle } from "./Style";
 import logocard from "../../../asset/img/logocard.jpeg";
 import logo2 from "../../../asset/img/logo2.jpg";
 import logo3 from "../../../asset/img/logo3.jpeg";
@@ -94,7 +94,10 @@ const Home = () => {
             </Col>
           </Row>
         </RowStyle>
-        <Pagination defaultCurrent={6} total={500} />;
+        <PaginationStyle>
+          {" "}
+          <Pagination defaultCurrent={1} total={500} />
+        </PaginationStyle>
       </div>
       <Footer />
     </BodyStyle>

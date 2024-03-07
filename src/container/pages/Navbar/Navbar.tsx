@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DownOutlined, SearchOutlined } from "@ant-design/icons";
-import { Menu, Dropdown, Space, Button } from "antd";
-import styled from "styled-components";
+import { Menu, Dropdown, Space } from "antd";
+
 import {
   StyledNavbar,
   InputContainer,
@@ -100,7 +100,9 @@ const Navbar = () => {
           </a>
         </Dropdown>
       </Drop2>
-      <StyledButton icon={<SearchOutlined />}>Tìm việc</StyledButton>
+      <StyledButton href="/notfound" icon={<SearchOutlined />}>
+        Tìm việc
+      </StyledButton>
     </StyledNavbar>
   );
 };
