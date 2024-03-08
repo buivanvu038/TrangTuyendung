@@ -195,7 +195,7 @@ const Registeronline = () => {
                       <CaretDownOutlined
                         style={{ color: "#f26d21", fontWeight: "bold" }}
                       />
-                    } // Đặt màu cho mũi tên và làm dày nét
+                    }
                   >
                     <Select.Option value="option1">Option 1</Select.Option>
                     <Select.Option value="option2">Option 2</Select.Option>
@@ -221,7 +221,7 @@ const Registeronline = () => {
                       <CaretDownOutlined
                         style={{ color: "#f26d21", fontWeight: "bold" }}
                       />
-                    } // Đặt màu cho mũi tên và làm dày nét
+                    }
                   >
                     <Select.Option value="option1">Option 1</Select.Option>
                     <Select.Option value="option2">Option 2</Select.Option>
@@ -245,7 +245,7 @@ const Registeronline = () => {
                       <CaretDownOutlined
                         style={{ color: "#f26d21", fontWeight: "bold" }}
                       />
-                    } // Đặt màu cho mũi tên và làm dày nét
+                    }
                   >
                     <Select.Option value="option1">Option 1</Select.Option>
                     <Select.Option value="option2">Option 2</Select.Option>

@@ -20,10 +20,9 @@ export const Textdangnhap = styled.h1`
   color: #f26d21;
 `;
 export const Image = styled.img`
-  width: 70%;
-  height: 50%;
-
-  margin-right: 10%;
+  width: 80%;
+  height: 60%;
+  margin-left: -15%;
 `;
 export const Imagerecapcha = styled.img`
   width: 10%;
@@ -31,18 +30,17 @@ export const Imagerecapcha = styled.img`
 
   margin-right: 10%;
 `;
-export const CustomButton = styled.div`
+export const CustomButton = styled.button`
   width: 65%;
   padding: 10px;
   background-color: #f26d21;
   border: none;
   margin-top: 30px;
-
   color: white;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  text-align: center; // Đã sửa từ 'text-aline' thành 'text-align'
+  text-align: center;
 `;
 export const Text = styled.div`
   font-family: "Roboto", sans-serif;

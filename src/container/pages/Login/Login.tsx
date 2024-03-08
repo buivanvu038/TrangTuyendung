@@ -1,6 +1,6 @@
-//import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Checkbox, Form, Input, Select } from "antd";
-import Header from "../../Header/Header";
 import {
   LoginContainer,
   FormContainer,
@@ -17,20 +17,28 @@ import ReCAPTCHA from "react-google-recaptcha";
 const { Option } = Select;
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
+
   const onFinish = (values: any) => {
-    console.log("Success:", values);
+    if (values.select === "dn") {
+      navigate("/enterprise");
+    } else if (values.select === "gv") {
+      navigate("/teacher");
+    } else if (values.select === "quantri") {
+      navigate("/admin");
+    } else if (values.select === "sinhvien") {
+      navigate("/studentpage");
+    }
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
 
-  const onChange = () => {}; // Function for ReCAPTCHA onChange event
+  const onChange = () => {};
 
   return (
     <>
-      <Header />
-
       <LoginContainer>
         <FormContainer>
           <Form
@@ -53,6 +61,7 @@ const Login: React.FC = () => {
                 <Option value="dn">Doanh nghiệp</Option>
                 <Option value="gv">Giảng viên</Option>
                 <Option value="quantri">Quản trị </Option>
+                <Option value="sinhvien">Sinh viên</Option>
               </Select>
             </Form.Item>
             <Text>Email</Text>
@@ -86,14 +95,11 @@ const Login: React.FC = () => {
                 <a href="/Regenerate">Quên mật khẩu?</a>
               </TextPass>
             </div>
-            {/* Thêm ReCAPTCHA */}
             <ReCAPTCHA
               sitekey="6LevfIkpAAAAAHtj4MP5CUZf1gIT9Dib7qdT_NJz"
               onChange={onChange}
             />
-            <a href="/home">
-              <CustomButton> Đăng Nhập</CustomButton>
-            </a>
+            <CustomButton type="submit">Đăng Nhập</CustomButton>
           </Form>
         </FormContainer>
         <ImageContainer>

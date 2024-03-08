@@ -10,7 +10,7 @@ import {
 } from "./Style";
 import img from "../../asset/img/img1.jpg";
 
-const Headermain: React.FC = () => {
+const HeaderEnterprise: React.FC = () => {
   return (
     <div>
       <StyledImagee>
@@ -18,12 +18,13 @@ const Headermain: React.FC = () => {
           <img src={img} alt="" />
         </StyledImageWrapper>
         <StyledImage>
-          <Text href="/studentpage">
-            <UserAddOutlined style={{ marginRight: "10px" }} /> Xem JD yêu cầu
-            tuyển dụng
+          <Text href="/Jobsearch">
+            <UserAddOutlined style={{ marginRight: "10px" }} /> Tìm kiếm việc
+            làm
           </Text>
-          <Text2 href="/Registeronline">
-            <BookOutlined style={{ marginRight: "10px" }} /> Đăng ký trực tuyến
+          <Text2 href="/RegisterEnterprise">
+            <BookOutlined style={{ marginRight: "10px" }} /> Doanh nghiệp đăng
+            ký
           </Text2>
         </StyledImage>
       </StyledImagee>
@@ -31,4 +32,4 @@ const Headermain: React.FC = () => {
   );
 };
 
-export default Headermain;
+export default HeaderEnterprise;

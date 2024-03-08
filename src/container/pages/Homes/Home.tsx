@@ -1,6 +1,5 @@
 import React from "react";
-import Headermain from "../../Headermain/Headermain";
-import Footer from "../Footer/Footer";
+
 import Navbar from "../Navbar/Navbar";
 import Card from "../../../components/Cards/Card";
 import { Col, Row } from "antd";
@@ -14,7 +13,6 @@ import logo4 from "../../../asset/img/logo4.jpeg";
 const Home = () => {
   return (
     <BodyStyle className="container">
-      <Headermain />
       <Navbar />
       <div className="content">
         <Texttitle>
@@ -99,7 +97,6 @@ const Home = () => {
           <Pagination defaultCurrent={1} total={500} />
         </PaginationStyle>
       </div>
-      <Footer />
     </BodyStyle>
   );
 };

@@ -10,7 +10,6 @@ import {
   Stylebodycolor,
 } from "./Style";
 import logonotfound2 from "../../../asset/img/logonotfound2.png";
-
 const Notfound = () => {
   return (
     <Stylebodycolor>
@@ -36,5 +35,4 @@ const Notfound = () => {
     </Stylebodycolor>
   );
 };
-
 export default Notfound;
