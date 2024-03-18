@@ -12,6 +12,9 @@ import Enterprise from "./pages/Enterprise/Enterprise";
 import RegisterEnterprise from "./pages/RegisterEnterprise/RegisterEnterprise";
 import Studentpage from "./pages/Studentpage/Studentpage";
 import Jobsearch from "./pages/Jobsearch/Jobsearch";
+import Quiz from "./pages/Quiz/Quiz";
+import Choosetopic from "./pages/Choosetopic/Choosetopic";
+import Studyprocess from "./pages/Studyprocess/Studyprocess";
 const Defaultlayout = () => {
   return (
     <Router>
@@ -26,8 +29,10 @@ const Defaultlayout = () => {
           <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/registerEnterprise" element={<RegisterEnterprise />} />
           <Route path="/studentpage" element={<Studentpage />} />
-
+          <Route path="/quiz" element={<Quiz />} />
           <Route path="/jobsearch" element={<Jobsearch />} />
+          <Route path="/choosetopic" element={<Choosetopic />} />
+          <Route path="/studyprocess" element={<Studyprocess />} />
         </Routes>
       </div>
     </Router>

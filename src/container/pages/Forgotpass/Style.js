@@ -75,5 +75,4 @@ export const Cusbt = styled.p`
   height: 60%;
   font-size: 20px;
   margin-left: 30%;
-  margin-bottom: 20px;
 `;

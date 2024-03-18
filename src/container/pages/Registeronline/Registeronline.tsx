@@ -65,219 +65,206 @@ const Registeronline = () => {
             />
           </Styleupload>
 
-          <Form>
-            <Row gutter={[16, 16]}>
-              <Col span={9}>
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Họ và tên<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  className="formItem"
-                  name="name"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập họ và tên" },
-                  ]}
-                >
-                  <Input className="formInput" placeholder="Nhập họ và tên" />
-                </Form.Item>
-
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Ngày sinh<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  className="formItem"
-                  name="birthday"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập ngày sinh" },
-                  ]}
-                >
-                  <Input type="date" className="formInput" />
-                </Form.Item>
-                <Form.Item
-                  className="formItem"
-                  name="position"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Vui lòng chọn vị trí ứng tuyển",
-                    },
-                  ]}
-                >
-                  <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                    Chọn vị trí ứng tuyển{" "}
-                    <span style={{ color: "red" }}>*</span>
-                  </div>
-                  <Select
-                    className="formInput"
-                    placeholder="Option 1"
-                    suffixIcon={
-                      <CaretDownOutlined
-                        style={{ color: "#f26d21", fontWeight: "bold" }}
-                      />
-                    }
-                  >
-                    <Select.Option value="option1">Option 1</Select.Option>
-                    <Select.Option value="option2">Option 2</Select.Option>
-                  </Select>
-                </Form.Item>
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Địa chỉ email<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  className="formItem"
-                  name="email"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập địa chỉ email" },
-                  ]}
-                >
-                  <Input className="formInput" placeholder="Nhập email" />
-                </Form.Item>
-
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Điện thoại<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  name="phone"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập số điện thoại" },
-                  ]}
-                >
-                  <Input
-                    className="formInput"
-                    placeholder="Nhập số điện thoại"
-                  />
-                </Form.Item>
-              </Col>
-
-              <Col span={9}>
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Trường đang học<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  className="formItem"
-                  name="School"
-                  rules={[{ required: true, message: "Nhập trường đang học" }]}
-                >
-                  <Input
-                    className="formInput"
-                    placeholder="Nhập trường đang học"
-                  />
-                </Form.Item>
-                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                  Chuyên ngành<span style={{ color: "red" }}>*</span>
-                </div>
-                <Form.Item
-                  name="majors"
-                  rules={[{ required: true, message: "Nhập chuyên ngành" }]}
-                >
-                  <Input
-                    className="formInput"
-                    placeholder="Nhập chuyên ngành"
-                  />
-                </Form.Item>
-                <Form.Item
-                  className="formItem"
-                  name="position"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Vui lòng chọn Hình thức đăng ký",
-                    },
-                  ]}
-                >
-                  <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                    Hình thức đăng ký <span style={{ color: "red" }}>*</span>
-                  </div>
-                  <Select
-                    className="formInput"
-                    placeholder="Option 1"
-                    suffixIcon={
-                      <CaretDownOutlined
-                        style={{ color: "#f26d21", fontWeight: "bold" }}
-                      />
-                    }
-                  >
-                    <Select.Option value="option1">Option 1</Select.Option>
-                    <Select.Option value="option2">Option 2</Select.Option>
-                  </Select>
-                </Form.Item>
-                <Form.Item
-                  className="formItem"
-                  name="position"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Vui lòng chọn Hình thức thực hiện",
-                    },
-                  ]}
-                >
-                  <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                    Hình thức thực hiện <span style={{ color: "red" }}>*</span>
-                  </div>
-                  <Select
-                    className="formInput"
-                    placeholder="Option 1"
-                    suffixIcon={
-                      <CaretDownOutlined
-                        style={{ color: "#f26d21", fontWeight: "bold" }}
-                      />
-                    }
-                  >
-                    <Select.Option value="option1">Option 1</Select.Option>
-                    <Select.Option value="option2">Option 2</Select.Option>
-                  </Select>
-                </Form.Item>
-                <Form.Item
-                  className="formItem"
-                  name="position"
-                  rules={[
-                    { required: true, message: "Vui lòng chọn hình thức" },
-                  ]}
-                >
-                  <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
-                    Bạn biết Alta Group từ đâu{" "}
-                    <span style={{ color: "red" }}>*</span>
-                  </div>
-                  <Select
-                    className="formInput"
-                    placeholder="Option 1"
-                    suffixIcon={
-                      <CaretDownOutlined
-                        style={{ color: "#f26d21", fontWeight: "bold" }}
-                      />
-                    }
-                  >
-                    <Select.Option value="option1">Option 1</Select.Option>
-                    <Select.Option value="option2">Option 2</Select.Option>
-                  </Select>
-                </Form.Item>
-              </Col>
-            </Row>
-
-            <Form.Item style={{ paddingBottom: "10px" }}>
-              <Button
-                htmlType="submit"
-                style={{
-                  margin: "3px",
-                  background: "#F26D21",
-                  color: "white",
-                  width: "100px",
-                  height: "40px",
-                }}
+          <Form style={{ display: "flex" }}>
+            <div style={{ width: "30%", marginRight: "50px" }}>
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Họ và tên<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                className="formItem"
+                name="name"
+                rules={[{ required: true, message: "Vui lòng nhập họ và tên" }]}
               >
-                Gửi{" "}
-                <i>
-                  <SendOutlined
-                    style={{ marginLeft: "8px", transform: "rotate(-40deg)" }}
-                  />
-                </i>
-              </Button>
-            </Form.Item>
+                <Input className="formInput" placeholder="Nhập họ và tên" />
+              </Form.Item>
+
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Ngày sinh<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                className="formItem"
+                name="birthday"
+                rules={[{ required: true, message: "Vui lòng nhập ngày sinh" }]}
+              >
+                <Input type="date" className="formInput" />
+              </Form.Item>
+              <Form.Item
+                className="formItem"
+                name="position"
+                rules={[
+                  {
+                    required: true,
+                    message: "Vui lòng chọn vị trí ứng tuyển",
+                  },
+                ]}
+              >
+                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                  Chọn vị trí ứng tuyển <span style={{ color: "red" }}>*</span>
+                </div>
+                <Select
+                  className="formInput"
+                  placeholder="Option 1"
+                  suffixIcon={
+                    <CaretDownOutlined
+                      style={{ color: "#f26d21", fontWeight: "bold" }}
+                    />
+                  }
+                >
+                  <Select.Option value="option1">Option 1</Select.Option>
+                  <Select.Option value="option2">Option 2</Select.Option>
+                </Select>
+              </Form.Item>
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Địa chỉ email<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                className="formItem"
+                name="email"
+                rules={[
+                  { required: true, message: "Vui lòng nhập địa chỉ email" },
+                ]}
+              >
+                <Input className="formInput" placeholder="Nhập email" />
+              </Form.Item>
+
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Điện thoại<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                name="phone"
+                rules={[
+                  { required: true, message: "Vui lòng nhập số điện thoại" },
+                ]}
+              >
+                <Input className="formInput" placeholder="Nhập số điện thoại" />
+              </Form.Item>
+            </div>
+            <div style={{ width: "30%" }}>
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Trường đang học<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                className="formItem"
+                name="School"
+                rules={[{ required: true, message: "Nhập trường đang học" }]}
+              >
+                <Input
+                  className="formInput"
+                  placeholder="Nhập trường đang học"
+                />
+              </Form.Item>
+              <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                Chuyên ngành<span style={{ color: "red" }}>*</span>
+              </div>
+              <Form.Item
+                name="majors"
+                rules={[{ required: true, message: "Nhập chuyên ngành" }]}
+              >
+                <Input className="formInput" placeholder="Nhập chuyên ngành" />
+              </Form.Item>
+              <Form.Item
+                className="formItem"
+                name="position"
+                rules={[
+                  {
+                    required: true,
+                    message: "Vui lòng chọn Hình thức đăng ký",
+                  },
+                ]}
+              >
+                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                  Hình thức đăng ký <span style={{ color: "red" }}>*</span>
+                </div>
+                <Select
+                  className="formInput"
+                  placeholder="Option 1"
+                  suffixIcon={
+                    <CaretDownOutlined
+                      style={{ color: "#f26d21", fontWeight: "bold" }}
+                    />
+                  }
+                >
+                  <Select.Option value="option1">Option 1</Select.Option>
+                  <Select.Option value="option2">Option 2</Select.Option>
+                </Select>
+              </Form.Item>
+              <Form.Item
+                className="formItem"
+                name="position"
+                rules={[
+                  {
+                    required: true,
+                    message: "Vui lòng chọn Hình thức thực hiện",
+                  },
+                ]}
+              >
+                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                  Hình thức thực hiện <span style={{ color: "red" }}>*</span>
+                </div>
+                <Select
+                  className="formInput"
+                  placeholder="Option 1"
+                  suffixIcon={
+                    <CaretDownOutlined
+                      style={{ color: "#f26d21", fontWeight: "bold" }}
+                    />
+                  }
+                >
+                  <Select.Option value="option1">Option 1</Select.Option>
+                  <Select.Option value="option2">Option 2</Select.Option>
+                </Select>
+              </Form.Item>
+              <Form.Item
+                className="formItem"
+                name="position"
+                rules={[{ required: true, message: "Vui lòng chọn hình thức" }]}
+              >
+                <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
+                  Bạn biết Alta Group từ đâu{" "}
+                  <span style={{ color: "red" }}>*</span>
+                </div>
+                <Select
+                  className="formInput"
+                  placeholder="Option 1"
+                  suffixIcon={
+                    <CaretDownOutlined
+                      style={{ color: "#f26d21", fontWeight: "bold" }}
+                    />
+                  }
+                >
+                  <Select.Option value="option1">Option 1</Select.Option>
+                  <Select.Option value="option2">Option 2</Select.Option>
+                </Select>
+              </Form.Item>
+
+              <Form.Item style={{ paddingBottom: "10px" }}>
+                <Button
+                  htmlType="submit"
+                  style={{
+                    marginLeft: "-110%",
+                    background: "#F26D21",
+                    color: "white",
+                    width: "100px",
+                    height: "40px",
+                  }}
+                >
+                  Gửi{" "}
+                  <i>
+                    <SendOutlined
+                      style={{ marginLeft: "8px", transform: "rotate(-40deg)" }}
+                    />
+                  </i>
+                </Button>
+              </Form.Item>
+            </div>
           </Form>
         </Stylebodymain>
       </div>
 
-      <Footer />
+      <div style={{ marginTop: "7%" }}>
+        {" "}
+        <Footer />
+      </div>
     </Stylebody>
   );
 };

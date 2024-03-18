@@ -30,10 +30,8 @@ export const Text = styled.a`
   color: black;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: #f26d21;
-    text-decoration: none;
+  &:active {
+    color: orange; /* Màu cam khi được nhấn */
   }
 `;
 
@@ -44,10 +42,4 @@ export const Text2 = styled.a`
   cursor: pointer;
   color: black;
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: #f26d21;
-    text-decoration: none;
-  }
 `;

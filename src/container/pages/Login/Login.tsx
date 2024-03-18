@@ -13,21 +13,41 @@ import {
 } from "../Login/Style";
 import imgmain from "../../../asset/img/imgmain.jpg";
 import ReCAPTCHA from "react-google-recaptcha";
+import Header from "../../Header/Header";
+import { getDatabase, ref, push, set } from "firebase/database";
 
 const { Option } = Select;
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
 
-  const onFinish = (values: any) => {
-    if (values.select === "dn") {
-      navigate("/enterprise");
-    } else if (values.select === "gv") {
-      navigate("/teacher");
-    } else if (values.select === "quantri") {
-      navigate("/admin");
-    } else if (values.select === "sinhvien") {
-      navigate("/studentpage");
+  const onFinish = async (values: any) => {
+    try {
+      // Khởi tạo đối tượng cơ sở dữ liệu
+      const database = getDatabase();
+
+      // Tạo một tham chiếu mới cho mỗi người dùng sử dụng push để tự động tạo ID duy nhất
+      const userRef = push(ref(database, "users"));
+
+      // Ghi dữ liệu vào Firebase
+      await set(userRef, {
+        id: 1,
+        name: values.username,
+        password: values.password,
+      });
+
+      // Điều hướng đến trang phù hợp dựa trên vai trò
+      if (values.select === "dn") {
+        navigate("/enterprise");
+      } else if (values.select === "gv") {
+        navigate("/teacher");
+      } else if (values.select === "quantri") {
+        navigate("/admin");
+      } else if (values.select === "sinhvien") {
+        navigate("/studentpage");
+      }
+    } catch (error) {
+      console.error("Error adding document: ", error);
     }
   };
 
@@ -39,6 +59,7 @@ const Login: React.FC = () => {
 
   return (
     <>
+      <Header />
       <LoginContainer>
         <FormContainer>
           <Form

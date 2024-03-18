@@ -101,9 +101,11 @@ const ForgotPass: React.FC = () => {
           onOk={handleOk}
           onCancel={handleCancel}
           footer={[
-            <a href="/home">
+            <a href="/login">
               {" "}
-              <Cusbt key="submit">Đăng nhập ngay</Cusbt>
+              <Cusbt style={{ height: "40px" }} key="submit">
+                <span style={{ marginTop: "30px" }}> Đăng nhập ngay</span>
+              </Cusbt>
             </a>,
           ]}
         >
