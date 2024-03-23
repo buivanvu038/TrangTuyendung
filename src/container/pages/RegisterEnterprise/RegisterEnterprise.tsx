@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 import { Stylebody, Stylebodymain, Styletext, Stylefooter } from "./Style";
 import { Button, Form, Input, Row, Col } from "antd";
 import { SendOutlined } from "@ant-design/icons";
@@ -14,7 +14,11 @@ const RegisterEnterprise = () => {
           <Styletext>ĐIỀN THÔNG TIN ĐĂNG KÝ</Styletext>
 
           <Form>
-            <Row style={{ maxWidth: "100%" }} gutter={[16, 16]}>
+            <Row
+              className="container"
+              style={{ maxWidth: "100%", display: "flex" }}
+              gutter={[16, 16]}
+            >
               <Col span={6}>
                 <div style={{ marginBottom: "5px", fontWeight: "bold" }}>
                   Email liên hệ<span style={{ color: "red" }}>*</span>

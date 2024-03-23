@@ -22,7 +22,6 @@ export const StyledImagee = styled.div`
   background: #ffff;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 `;
-
 export const Text = styled.a`
   display: flex;
   margin-bottom: 20px;
@@ -30,8 +29,10 @@ export const Text = styled.a`
   color: black;
   text-decoration: none;
 
-  &:active {
-    color: orange; /* Màu cam khi được nhấn */
+  &:hover,
+  &:focus {
+    color: #f26d21;
+    text-decoration: none;
   }
 `;
 
@@ -42,4 +43,10 @@ export const Text2 = styled.a`
   cursor: pointer;
   color: black;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #f26d21;
+    text-decoration: none;
+  }
 `;

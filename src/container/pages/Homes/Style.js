@@ -16,6 +16,13 @@ export const RowStyle = styled.div`
   & row {
     margin-bottom: 30px;
   }
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+  }
 `;
 export const Row2 = styled.div`
   margin-bottom: 30px;

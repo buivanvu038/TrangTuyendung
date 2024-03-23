@@ -17,10 +17,25 @@ export const StyledNavbar = styled.div`
   margin-right: 500px;
   border-radius: 7px;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    margin-left: 100px;
+    margin-right: 10%;
+    margin-bottom: 90px;
+    height: 50px;
+    display: colum;
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 export const DropdownContainer = styled.div`
   margin-right: 30px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -48,6 +63,12 @@ export const PlaceholderText = styled.span`
 
 export const Drop2 = styled.span`
   margin-left: 70px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    .dropdown {
+      margin-top: 10%;
+    }
+  }
 `;
 
 export const StyledButton = styled(Button)`

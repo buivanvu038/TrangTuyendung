@@ -3,7 +3,7 @@ import { Typography, Form, Select, Row, Col, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { PlusOutlined, CaretDownOutlined } from "@ant-design/icons";
 import Headerquiz from "../../Headerquiz/Headerquiz";
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 
 const { Title } = Typography;
 const { Option } = Select;

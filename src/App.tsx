@@ -6,6 +6,7 @@ import Defaulayout from "./container/Defaulayout";
 import { ref, get, child } from "firebase/database";
 import { database } from "./../src/services/firebase";
 
+// import Store from "./Store";
 function App() {
   useEffect(() => {
     const fetchData = async () => {

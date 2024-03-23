@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Headermain from "../../Headermain/Headermain";
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 import {
   Stylebody,
   Styleupload,

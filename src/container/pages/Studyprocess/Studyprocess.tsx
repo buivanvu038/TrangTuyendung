@@ -2,7 +2,7 @@ import React from "react";
 import Headerquiz from "../../Headerquiz/Headerquiz";
 import { Form, Select, Input, Button, message } from "antd"; // Import Form, Select, Input, Button, and message from antd
 import { CaretDownOutlined, SendOutlined } from "@ant-design/icons"; // Import CaretDownOutlined and SendOutlined icons
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 
 const { TextArea } = Input;
 

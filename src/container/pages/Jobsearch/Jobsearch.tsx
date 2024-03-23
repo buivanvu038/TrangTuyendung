@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderEnterprise from "../../HeaderEnterprise/HeaderEnterprise";
 import Home from "../Homes/Home";
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 import { BodyStyle2 } from "./Style";
 
 const Jobsearch = () => {

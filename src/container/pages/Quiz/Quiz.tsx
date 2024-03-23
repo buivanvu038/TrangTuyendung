@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import { Textquiz, Stylbodyquiz, Stylecheckbox } from "./Style";
 import { Modal, Button } from "antd"; // Import Modal and Button from antd
-import Footer from "../Footer/Footer";
+import Footer from "../../Footer/Footer";
 
 const formatTime = (timeInSeconds: number): string => {
   const hours: number = Math.floor(timeInSeconds / 3600);

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Checkbox, Form, Input, Select } from "antd";
+import { loginSuccess } from "../../../redux/authSlice";
 import {
   LoginContainer,
   FormContainer,
@@ -14,29 +16,24 @@ import {
 import imgmain from "../../../asset/img/imgmain.jpg";
 import ReCAPTCHA from "react-google-recaptcha";
 import Header from "../../Header/Header";
-import { getDatabase, ref, push, set } from "firebase/database";
 
 const { Option } = Select;
 
 const Login: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onFinish = async (values: any) => {
     try {
-      // Khởi tạo đối tượng cơ sở dữ liệu
-      const database = getDatabase();
+      // Simulate API call or any other logic here
+      // Dispatch action loginSuccess when login is successful
+      dispatch(
+        loginSuccess({ email: values.username, password: values.password })
+      );
 
-      // Tạo một tham chiếu mới cho mỗi người dùng sử dụng push để tự động tạo ID duy nhất
-      const userRef = push(ref(database, "users"));
-
-      // Ghi dữ liệu vào Firebase
-      await set(userRef, {
-        id: 1,
-        name: values.username,
-        password: values.password,
-      });
-
-      // Điều hướng đến trang phù hợp dựa trên vai trò
+      // Navigate to the appropriate page based on role
       if (values.select === "dn") {
         navigate("/enterprise");
       } else if (values.select === "gv") {
@@ -47,7 +44,7 @@ const Login: React.FC = () => {
         navigate("/studentpage");
       }
     } catch (error) {
-      console.error("Error adding document: ", error);
+      console.error("Error:", error);
     }
   };
 
@@ -85,26 +82,40 @@ const Login: React.FC = () => {
                 <Option value="sinhvien">Sinh viên</Option>
               </Select>
             </Form.Item>
-            <Text>Email</Text>
-            <Form.Item
-              label=""
-              name="username"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-            <Text> Mật Khẩu</Text>
-            <Form.Item
-              label=""
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-            >
-              <Input.Password />
-            </Form.Item>
+            <div className="login">
+              <Text>Email</Text>
+              <Form.Item
+                label=""
+                name="username"
+                rules={[
+                  { required: true, message: "Please input your username!" },
+                ]}
+              >
+                <Input
+                  type="email"
+                  required
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Item>
+              <Text> Mật Khẩu</Text>
+              <Form.Item
+                label=""
+                name="password"
+                rules={[
+                  { required: true, message: "Please input your password!" },
+                ]}
+              >
+                <Input
+                  type="password"
+                  required
+                  className="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Item>
+            </div>
             <Form.Item
               name="remember"
               valuePropName="checked"
@@ -123,6 +134,7 @@ const Login: React.FC = () => {
             <CustomButton type="submit">Đăng Nhập</CustomButton>
           </Form>
         </FormContainer>
+
         <ImageContainer>
           <Image src={imgmain} alt="Login Image" />
         </ImageContainer>

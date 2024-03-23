@@ -20,36 +20,36 @@ const Navbar = () => {
 
   const items1 = [
     {
-      label: <a href="/#">1st menu item</a>,
+      label: <a href="/#">Thiết kế UI/UX (Figma)</a>,
       key: "0",
     },
     {
-      label: <a href="/#">2nd menu item</a>,
+      label: <a href="/#">Thiết kế UI/UX (Figma)</a>,
       key: "1",
     },
     {
       type: "divider",
     },
     {
-      label: "3rd menu item",
+      label: "Thiết kế UI/UX (Figma)",
       key: "3",
     },
   ];
 
   const items2 = [
     {
-      label: "Dropdown 2 - Item 1",
+      label: "ALTA SOFTWARE",
       key: "0",
     },
     {
-      label: "Dropdown 2 - Item 2",
+      label: "ALTA SOFTWARE",
       key: "1",
     },
     {
       type: "divider",
     },
     {
-      label: "Dropdown 2 - Item 3",
+      label: "ALTA SOFTWARE",
       key: "3",
     },
   ];
@@ -64,24 +64,25 @@ const Navbar = () => {
           <PlaceholderText>Nhập vị trí muốn ứng tuyển</PlaceholderText>
         )}
       </InputContainer>
-      <Dropdown
-        overlay={
-          <Menu>
-            {items1.map((item) => (
-              <Menu.Item key={item.key}>{item.label}</Menu.Item>
-            ))}
-          </Menu>
-        }
-        trigger={["click"]}
-      >
-        <a onClick={(e) => e.preventDefault()}>
-          <Space>
-            Chọn lĩnh vực chuyên môn
-            <DownOutlined style={{ color: "#f26d21", marginRight: "8px" }} />
-          </Space>
-        </a>
-      </Dropdown>
       <Drop2>
+        <Dropdown
+          overlay={
+            <Menu>
+              {items1.map((item) => (
+                <Menu.Item key={item.key}>{item.label}</Menu.Item>
+              ))}
+            </Menu>
+          }
+          trigger={["click"]}
+        >
+          <a onClick={(e) => e.preventDefault()}>
+            <Space>
+              Chọn lĩnh vực chuyên môn
+              <DownOutlined style={{ color: "#f26d21", marginRight: "8px" }} />
+            </Space>
+          </a>
+        </Dropdown>
+
         <Dropdown
           overlay={
             <Menu>

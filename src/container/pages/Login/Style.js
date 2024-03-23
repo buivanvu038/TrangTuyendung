@@ -5,6 +5,10 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media screen and (max-width: 768px) {
+    margin-left: -100px;
+    margin-top: -100px;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -15,6 +19,9 @@ export const FormContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 50%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const Textdangnhap = styled.h1`
   color: #f26d21;
@@ -52,6 +59,9 @@ export const TextPass = styled.a`
     margin-left: 35%;
     color: #f26d21;
     text-decoration: underline;
+    @media screen and (max-width: 768px) {
+      margin-left: 10px;
+    }
   }
 `;
 export const Recapcha = styled.div`
@@ -65,6 +75,6 @@ export const Recapcha = styled.div`
 `;
 
 export const ImageRecapcha = styled.img`
-  width: 100px; /* Điều chỉnh kích thước của hình ảnh */
+  width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của phần tử cha */
   height: auto; /* Tự động điều chỉnh chiều cao dựa trên chiều rộng */
 `;

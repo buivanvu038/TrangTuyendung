@@ -1,7 +1,7 @@
 import React from "react";
 import Headermain from "./../../Headermain/Headermain";
-import Navbar from "./../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import Navbar from "../../../components/Navbar/Navbar";
+import Footer from "../../Footer/Footer";
 import {
   StyleText,
   StyleText2,

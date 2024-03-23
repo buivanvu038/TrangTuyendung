@@ -16,8 +16,17 @@ export const StyledImage = styled.div`
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px; /* Đặt khoảng cách giữa các ký tự */
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 100px;
+  }
 `;
 
 export const StyledImagee = styled.div`
   display: flex;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;

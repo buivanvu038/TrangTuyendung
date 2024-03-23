@@ -11,16 +11,29 @@ export const StyledImageWrapper = styled.div`
 export const StyledImage = styled.div`
   margin-left: 45%;
   margin-top: 40px;
+  color: #f26d21;
   display: flex;
   font-family: roboto;
   font-size: 20px;
   font-weight: bold;
+  letter-spacing: 2px; /* Đặt khoảng cách giữa các ký tự */
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 100px;
+
+    height: 40px;
+    font-size: 16px;
+    display: colum;
+  }
 `;
 
 export const StyledImagee = styled.div`
   display: flex;
-  background: #ffff;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Text = styled.a`
