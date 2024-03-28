@@ -31,15 +31,23 @@ export const PaginationStyle = styled.div`
   text-align: center;
 
   .ant-pagination-item {
-    border-radius: 50%; // Đặt đường viền thành hình tròn
-    border-color: #f1f3f5; // Đặt màu cam cho ô phân trang
-    transition: background-color 0.3s; // Thêm hiệu ứng chuyển đổi màu
-    color: white; // Đặt màu cho số trong ô phân trang
+    border-radius: 50%;
+    border-color: #f1f3f5;
+    transition: background-color 0.3s;
+    color: white;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: #f26d21; // Giữ nguyên màu nền khi hover, được chọn và khi tập trung
+      background-color: #f26d21;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ant-pagination-item {
+      font-size: 14px; /* Điều chỉnh kích thước font cho điện thoại di động */
+      width: 30px; /* Điều chỉnh kích thước ô phân trang cho điện thoại di động */
+      height: 30px;
     }
   }
 `;
